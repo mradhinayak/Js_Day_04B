@@ -88,3 +88,22 @@ function isPalindrome(num) {
     return reversedNumber === originalNumber
 }
 
+// Solution 7th
+function isArmstrong(num) {
+    const originalNum = num
+    const digits = []
+    while(num > 0) {
+        digits.unshift(num % 10)
+        num = Math.floor(num / 10)
+    }
+
+    let digitsPowerSum = 0
+
+    for(let i = 0; i < digits.length; i++) {
+        digitsPowerSum += digits[i] ** digits.length
+    }
+
+    return digitsPowerSum === originalNum
+}
+
+console.log(reverseDigit(1234));
