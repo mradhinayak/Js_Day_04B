@@ -45,3 +45,11 @@ function removeDecimal(num) {
 }
 
 console.log(removeDecimal(85.45));
+
+// Solution 4th
+function seprateParts(num) {
+    const fractionPart = Number((num % 1).toFixed(10))
+    const wholePart = Number((num - fractionPart).toFixed(10))
+    return {wholePart, fractionPart}
+}
+console.log(seprateParts(95.75))
