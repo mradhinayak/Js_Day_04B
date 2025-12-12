@@ -25,3 +25,23 @@ function reverseDigit(num) {
 }
 
 console.log(reverseDigit(1234));
+
+// Solution 3rd
+function removeDecimal(num) {
+   while(!Number.isInteger(num)){
+    num = num * 10
+   }
+   return num
+}
+
+console.log(removeDecimal(12.34));
+
+// Solution 3rd; Method 2nd
+function removeDecimal(num) {
+   while(num !==Math.floor(num)){
+    num = num * 10
+   }
+   return num
+}
+
+console.log(removeDecimal(85.45));
